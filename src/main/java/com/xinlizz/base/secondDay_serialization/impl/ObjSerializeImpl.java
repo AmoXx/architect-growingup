@@ -5,7 +5,10 @@ import com.xinlizz.base.secondDay_serialization.IObjSerialize;
 import java.io.*;
 
 /**
- * 测试序列化实现类
+ * ObjSerializeImpl java自带序列化实现
+ *
+ * @Author xinlizz
+ * @Date ${DATE}
  */
 public class ObjSerializeImpl implements IObjSerialize {
     @Override
@@ -98,8 +101,8 @@ public class ObjSerializeImpl implements IObjSerialize {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-        }finally {
-            if (null != ois ) {
+        } finally {
+            if (null != ois) {
                 try {
                     ois.close();
                 } catch (IOException e) {
