@@ -14,10 +14,16 @@ public class Person implements Cloneable, Serializable {
 
     private String name;
 
+    private Boolean flag;
+
+    private Integer age;
+
     private Email email;
 
-    public Person(String name, Email email) {
+    public Person(String name, Boolean flag, Integer age, Email email) {
         this.name = name;
+        this.flag = flag;
+        this.age = age;
         this.email = email;
     }
 
@@ -27,6 +33,22 @@ public class Person implements Cloneable, Serializable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Boolean getFlag() {
+        return flag;
+    }
+
+    public void setFlag(Boolean flag) {
+        this.flag = flag;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
     }
 
     public Email getEmail() {
@@ -41,7 +63,9 @@ public class Person implements Cloneable, Serializable {
     public String toString() {
         return "Person{" +
                 "name='" + name + '\'' +
-                ", email=" + email.getContent() +
+                ", flag=" + flag +
+                ", age=" + age +
+                ", email=" + email +
                 '}';
     }
 
